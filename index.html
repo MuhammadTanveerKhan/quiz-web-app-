@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="maincontainer">
+      <div id="topbar">
+        <div id="questiontop">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9.09 9a3 3 0 1 1 5.82 1c0 2-3 3-3 3" />
+            <line x1="12" y1="17" x2="12.01" y2="17" />
+          </svg>
+        </div>
+        <div id="heading">
+          <h1>Quiz app</h1>
+        </div>
+        <div id="time">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- outer circle -->
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" />
+
+            <!-- hour hand -->
+            <line
+              x1="12"
+              y1="12"
+              x2="12"
+              y2="7"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+            <!-- minute hand -->
+            <line
+              x1="12"
+              y1="12"
+              x2="16"
+              y2="12"
+              stroke="white"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+
+            <!-- center dot -->
+            <circle cx="12" cy="12" r="1" fill="white" />
+          </svg>
+          <p>15sec</p>
+        </div>
+      </div>
+      <div id="progress">
+        <h5 class="progressper  progressques">
+           Question 1 of 10
+        </h5>
+        <div id="progressbar"></div>
+        <h5 class="progressper progressper2">
+          10%
+        </h5>
+      </div>
+      <div id="Questions">
+        <button class="btn start">Start</button>
+      </div>
+    </div>
+    <div id="scoreboard">
+      <div class="sbc">
+        <span>
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Bullet 1 -->
+            <circle cx="10" cy="15" r="3" fill="#8B5CF6" />
+            <line
+              x1="18"
+              y1="15"
+              x2="50"
+              y2="15"
+              stroke="#8B5CF6"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+
+            <!-- Bullet 2 -->
+            <circle cx="10" cy="30" r="3" fill="#8B5CF6" />
+            <line
+              x1="18"
+              y1="30"
+              x2="50"
+              y2="30"
+              stroke="#8B5CF6"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+
+            <!-- Bullet 3 -->
+            <circle cx="10" cy="45" r="3" fill="#8B5CF6" />
+            <line
+              x1="18"
+              y1="45"
+              x2="50"
+              y2="45"
+              stroke="#8B5CF6"
+              stroke-width="4"
+              stroke-linecap="round"
+            /></svg
+        ></span>
+        <span id="qs2">
+          <p>Total Question</p>
+
+          <p>10</p>
+        </span>
+      </div>
+
+      <div class="sbc">
+        <span>
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Light purple background -->
+            <circle cx="30" cy="30" r="30" fill="#DCFCE7" />
+
+            <!-- Green tick -->
+            <path
+              d="M18 30L27 39L43 21"
+              fill="none"
+              stroke="#22C55E"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span id="ans">
+          <p>Answered</p>
+          <p id="answered">0</p>
+        </span>
+      </div>
+      <div class="sbc">
+        <span>
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Light yellow background -->
+            <circle cx="30" cy="30" r="30" fill="#FEF9C3" />
+
+            <!-- Star -->
+            <path
+              d="M30 12
+       L35.3 23.5
+       L48 25.2
+       L38.8 34
+       L41.2 46.5
+       L30 40.2
+       L18.8 46.5
+       L21.2 34
+       L12 25.2
+       L24.7 23.5
+       Z"
+              fill="#FACC15"
+              stroke="#EAB308"
+              stroke-width="1.5"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </span>
+        <span id="score">
+          <p>Score</p>
+          <p id="correct">0</p>
+        </span>
+      </div>
+      <!-- <div class="sbc">
+        <span>
+          <svg
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <!-- Light red background -->
+            <!-- <circle cx="30" cy="30" r="30" fill="#FEE2E2" /> -->
+
+            <!-- Clock -->
+            <!-- <circle
+              cx="30"
+              cy="30"
+              r="14"
+              fill="none"
+              stroke="#EF4444"
+              stroke-width="3" -->
+            />
+
+            <!-- Hour hand -->
+            <!-- <line
+              x1="30"
+              y1="30"
+              x2="30"
+              y2="22"
+              stroke="#EF4444"
+              stroke-width="3"
+              stroke-linecap="round"
+            /> -->
+
+            <!-- Minute hand -->
+            <!-- <line
+              x1="30"
+              y1="30"
+              x2="37"
+              y2="34"
+              stroke="#EF4444"
+              stroke-width="3"
+              stroke-linecap="round" -->
+            />
+
+            <!-- Center dot -->
+            <!-- <circle cx="30" cy="30" r="2" fill="#EF4444" />
+          </svg>
+        </span>
+        <span> -->
+          <!-- <p>Time</p>
+          <p id="sec">15 sec</p>
+        </span>
+      </div>  -->
+    </div>
+    <script src="quiz.js"></script>
+  </body>
+</html>
